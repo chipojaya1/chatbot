@@ -36,11 +36,22 @@ After cleaning the data, we used SAS Enterprise Miner to identify the top 25 top
 We pre-processed the data by tokenizing sentences into individual words, performing lemmatization, and removing stop words. This transformed the raw text data into a more structured format suitable for analysis.
 
 ## The Text Analytics Model
-**Technologies Used for Text Analytics Model**  
-After extracting the 25 topics and matching them with the 10 general topic groups from the original dataset, we used SAS Enterprise Miner to create a text analytics model. Secondly, we used the Model Comparison feature of SAS so we could find the most accurate model. Finally, we also utilized the Score feature of the software so the model displays the probability that a customer inquiry is about a specific topic and assigns it the most probable one.
+**Technologies Used for Text Analytics Model**
+
+![diagram](https://user-images.githubusercontent.com/131799834/234358293-34fcab04-4cbc-4b97-b601-fda001425e34.png)
+
+After the data was parsed and filtered, we used SAS Enterprise Miner to create a text analytics model. The Model Comparison feature of SAS allowed us to find the most accurate model. Finally, we also utilized the Score feature of the software so the model displays the probability that a customer inquiry is about a specific topic and assigns it the most probable one.
 
 **Results for the Text Analytics Model**
-After topic extraction and matching our collected 25 topics with the 10 general ones given by the client, we compared a neural network, decision tree, and regression model to see which would more reliably predict the topic of a customer inquiry based on its contents. Out of those three, regression was the most accurate model, featuring a KS-statistic of 0.003 and a KS probability cutoff of 0.016.
+
+![f87f5cf4c24df6134268d5c44c9d81e8](https://user-images.githubusercontent.com/131799834/234359731-91ce2544-ea97-48a8-8b33-48dd8232ab32.png)
+
+After topic extraction and matching our collected 25 topics with the 10 general ones given by the client, we compared a neural network, decision tree, and regression model to see which would more reliably predict the topic of a customer inquiry based on its contents. Out of those three, regression was the most accurate model, featuring a KS-statistic of 0.113 and a KS probability cutoff of 0.295.
+
+
+
+
+
 The text analytics model also uses live scoring to identify the topic of a customer inquiry. The full documentation of the model and the live scoring results can be found in the Appendix. Full integration of the text analytics model into the chatbot is a work in progress.
 
 ## The Chatbot
